@@ -24,6 +24,10 @@ $dark-gray-blue: hsl(224, 30%, 27%);
     flex-direction: row;
 }
 
+@mixin box-theme($color: $white) {
+    background-color: $color;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -40,6 +44,8 @@ p {
 .result-section {
     background: linear-gradient(180deg, $bg-light-slate-blue 0%, $bg-light-royal-blue 100%);
     @include flex-col;
+    text-align: center;
+    color: $pale-blue;
 }
 
 .summary-section {
@@ -49,6 +55,22 @@ p {
 .summary-items {
     @include flex-row;
     justify-content: space-between;
+}
+
+#item-one {
+    @include box-theme($color: $light-red);
+}
+
+#item-two {
+    @include box-theme($color: $orangey-yellow);
+}
+
+#item-three {
+    @include box-theme($color: $green-teal);
+}
+
+#item-four {
+    @include box-theme($color: $cobalt-blue);
 }
 
 .attribution { font-size: 11px; text-align: center; }
