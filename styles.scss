@@ -1,8 +1,16 @@
 /* Primary Colors */
 $light-red: hsl(0, 100%, 67%);
+$bg-light-red: #fff6f5;
+
 $orangey-yellow: hsl(39, 100%, 56%);
+$bg-orangey-yellow: #fffbf2;
+
 $green-teal: hsl(166, 100%, 37%);
+$bg-green-teal: #f2fafa;
+
 $cobalt-blue: hsl(234, 85%, 45%);
+$bg-cobalt-blue: #f3f3fd;
+
 
 /* Gradients */
 $bg-light-slate-blue: hsl(252, 100%, 67%);
@@ -14,6 +22,9 @@ $pale-blue: hsl(221, 100%, 96%);
 $light-lavender: hsl(241, 100%, 89%);
 $dark-gray-blue: hsl(224, 30%, 27%);
 
+$border-radius-mobile: 0px 0px 20px 20px;
+$border-radius-desktop: 20px;
+
 @mixin flex-col {
     display: flex;
     flex-direction: column;
@@ -24,9 +35,11 @@ $dark-gray-blue: hsl(224, 30%, 27%);
     flex-direction: row;
 }
 
-@mixin box-theme($color: $white) {
-    background-color: $color;
+@mixin box-theme($color, $bg-color) {
+    color: $color;
+    background-color: $bg-color;
 }
+
 
 * {
     padding: 0;
@@ -35,6 +48,10 @@ $dark-gray-blue: hsl(224, 30%, 27%);
 
 body {
     font-family: 'Hanken Grotesk', sans-serif;
+}
+
+h1 {
+    font-size: 1rem;
 }
 
 p {
@@ -46,31 +63,35 @@ p {
     @include flex-col;
     text-align: center;
     color: $pale-blue;
+    border-radius: $border-radius-mobile;
 }
 
 .summary-section {
     @include flex-col;
+    padding: 20px;
 }
 
 .summary-items {
     @include flex-row;
     justify-content: space-between;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 #item-one {
-    @include box-theme($color: $light-red);
+    @include box-theme($light-red, $bg-light-red);
 }
 
 #item-two {
-    @include box-theme($color: $orangey-yellow);
+    @include box-theme($orangey-yellow, $bg-orangey-yellow);
 }
 
 #item-three {
-    @include box-theme($color: $green-teal);
+    @include box-theme($green-teal, $bg-green-teal);
 }
 
 #item-four {
-    @include box-theme($color: $cobalt-blue);
+    @include box-theme($cobalt-blue, $bg-cobalt-blue);
 }
 
 .attribution { font-size: 11px; text-align: center; }
