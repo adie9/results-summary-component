@@ -1,4 +1,14 @@
-/* Colors */
+/* Primary Colors */
+/* Gradients */
+/* Neutral Colors */
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+p {
+  font-size: 18px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
