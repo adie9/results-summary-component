@@ -14,12 +14,41 @@ $pale-blue: hsl(221, 100%, 96%);
 $light-lavender: hsl(241, 100%, 89%);
 $dark-gray-blue: hsl(224, 30%, 27%);
 
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
 p {
     font-size: 18px;
+}
+
+.result-section {
+    background: linear-gradient(180deg, $bg-light-slate-blue 0%, $bg-light-royal-blue 100%);
+    @include flex-col;
+}
+
+.summary-section {
+    @include flex-col;
+}
+
+.summary-items {
+    @include flex-row;
+    justify-content: space-between;
 }
 
 .attribution { font-size: 11px; text-align: center; }
