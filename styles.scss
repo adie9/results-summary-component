@@ -66,6 +66,10 @@ p {
     font-size: 18px;
 }
 
+.wrapper {
+    max-width: 422px;
+    margin: 0 auto;
+}
 
 .result-section {
     background: linear-gradient(180deg, $bg-light-slate-blue 0%, $bg-light-royal-blue 100%);
