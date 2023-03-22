@@ -143,15 +143,19 @@ button:hover {
 
 footer {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Desktop view */
 @media screen and (min-width: 992px) {
+  body {
+    margin-top: 205px;
+    margin-bottom: 205px;
+  }
   .wrapper {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "result summary";
-    margin-top: 205px;
     margin-left: auto;
     margin-right: auto;
     max-width: 716px;
