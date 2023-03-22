@@ -11,6 +11,8 @@ $bg-green-teal: #f2fafa;
 $cobalt-blue: hsl(234, 85%, 45%);
 $bg-cobalt-blue: #f3f3fd;
 
+$circle-color: #442fe2;
+
 
 /* Gradients */
 $bg-light-slate-blue: hsl(252, 100%, 67%);
@@ -18,12 +20,18 @@ $bg-light-royal-blue: hsl(241, 81%, 54%);
 
 /* Neutral Colors */
 $white: hsl(0, 0%, 100%);
+$gray: #a4a7b7;
 $pale-blue: hsl(221, 100%, 96%);
 $light-lavender: hsl(241, 100%, 89%);
 $dark-gray-blue: hsl(224, 30%, 27%);
 
 $border-radius-mobile: 0px 0px 20px 20px;
 $border-radius-desktop: 20px;
+
+/* Font sizes */
+$h1-fs: 1rem;
+$h2-fs: 1.3rem;
+$p-fs: 0.8rem;
 
 @mixin flex-col {
     display: flex;
@@ -51,7 +59,7 @@ body {
 }
 
 h1 {
-    font-size: 1rem;
+    font-size: $h1-fs;
 }
 
 p {
@@ -64,18 +72,80 @@ p {
     text-align: center;
     color: $pale-blue;
     border-radius: $border-radius-mobile;
+    row-gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    h1 {
+        color: $gray;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        padding-top: 15px;
+    }
+
+    p {
+        font-size: $p-fs;
+        color: $gray;
+    }
+
+}
+
+.result-desc {
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.circle {
+    @include flex-col;
+    justify-content: center;
+    background-color: $circle-color;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+
+    span {
+        font-size: 3rem;
+        font-weight: 700
+    }
+
+    p {
+        font-size: $p-fs;
+        color: $gray;
+    }
 }
 
 .summary-section {
     @include flex-col;
     padding: 20px;
+    row-gap: 20px;
 }
 
 .summary-items {
     @include flex-row;
     justify-content: space-between;
     border-radius: 10px;
-    padding: 5px;
+    padding: 15px;
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        color: $gray;
+    }
+
+    .numerator {
+        color: $dark-gray-blue;
+        font-weight: 700;
+    }
+}
+
+.icon-text-grp {
+    @include flex-row;
+    column-gap: 10px
 }
 
 #item-one {
@@ -94,6 +164,26 @@ p {
     @include box-theme($cobalt-blue, $bg-cobalt-blue);
 }
 
+button {
+    color: $white;
+    background-color: $dark-gray-blue;
+    border-radius: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background: linear-gradient(180deg, $bg-light-slate-blue 0%, $bg-light-royal-blue 100%);
+}
+
 .attribution { font-size: 11px; text-align: center; }
     
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* Desktop view */
+@media screen and (min-width: 992px) {
+
+}
