@@ -141,4 +141,44 @@ button:hover {
   color: hsl(228, 45%, 44%);
 }
 
-/* Desktop view *//*# sourceMappingURL=styles.css.map */
+footer {
+  margin-top: 20px;
+}
+
+/* Desktop view */
+@media screen and (min-width: 992px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "result summary";
+    margin-top: 205px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 716px;
+  }
+  .result-section {
+    grid-area: result;
+    border-radius: 20px;
+    z-index: 1;
+    box-shadow: 0px 10px 10px hsl(241, 100%, 89%);
+  }
+  .result-desc {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .summary-section {
+    grid-area: summary;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px hsl(241, 100%, 89%);
+  }
+  .circle {
+    width: 210px;
+    height: 210px;
+  }
+  .circle span {
+    font-size: 4rem;
+  }
+  .circle p {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

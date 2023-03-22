@@ -66,6 +66,7 @@ p {
     font-size: 18px;
 }
 
+
 .result-section {
     background: linear-gradient(180deg, $bg-light-slate-blue 0%, $bg-light-royal-blue 100%);
     @include flex-col;
@@ -182,8 +183,52 @@ button:hover {
     
 .attribution a { color: hsl(228, 45%, 44%); }
 
+footer {
+    margin-top: 20px;
+}
+
 
 /* Desktop view */
 @media screen and (min-width: 992px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'result summary';
+        margin-top: 205px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 716px;
+        
+    }
 
+    .result-section {
+        grid-area: result;
+        border-radius: $border-radius-desktop;
+        z-index: 1;
+        box-shadow: 0px 10px 10px $light-lavender;
+    }
+
+    .result-desc {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    .summary-section {
+        grid-area: summary;
+        border-radius: $border-radius-desktop;
+        box-shadow: 10px 10px 10px $light-lavender;
+    }
+
+    .circle {
+        width: 210px;
+        height: 210px;
+        
+        span {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
 }
